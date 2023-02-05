@@ -16,5 +16,5 @@ function eruda(){
   insert("//cdn.jsdelivr.net/npm/eruda", "eruda.init();");
 }
 function vConsole(){
-  insert("//unpkg.com/vconsole@latest/dist/vconsole.min.js", "new window.VConsole();");
+  insert("//unpkg.com/vconsole@latest/dist/vconsole.min.js", "let vconsole = new window.VConsole();");
 }
