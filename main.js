@@ -6,8 +6,11 @@ function script_el({src = null, body = null}){
   return script;
 }
 function insert(src, init){
-  document.body.appendChild(script_el({src}));
-  document.body.appendChild(script_el({body: init}));
+  let loader = script_el({src});
+  document.body.appendChild(loader);
+  loader.onload = function(){
+    document.body.appendChild(script_el({body: init}));
+  }
 }
 function eruda(){
   insert("//cdn.jsdelivr.net/npm/eruda", "eruda.init();");
