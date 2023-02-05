@@ -6,7 +6,7 @@ function script_el({src = null, body = null}){
   return script;
 }
 function insert(src, init){
-  document.body.appendChild(script_el(src));
+  document.body.appendChild(script_el({src}));
   document.body.appendChild(script_el({body: init}));
 }
 function eruda(){
